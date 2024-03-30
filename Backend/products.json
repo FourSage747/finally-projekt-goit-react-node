@@ -1,0 +1,227 @@
+[
+    {
+      "name": "Aspirin",
+      "type": "Tablets",
+      "dosage": "500 mg",
+      "manufacturer": "Bayer",
+      "price": 25.99,
+      "availability": true
+    },
+    {
+      "name": "Ibuprofen",
+      "type": "Tablets",
+      "dosage": "200 mg",
+      "manufacturer": "GlaxoSmithKline",
+      "price": 20.5,
+      "availability": false
+    },
+    {
+      "name": "Acetylcysteine",
+      "type": "Syrup",
+      "dosage": "200 mg/5 ml",
+      "manufacturer": "Sanofi",
+      "price": 35.75,
+      "availability": true
+    },
+    {
+      "name": "Paracetamol",
+      "type": "Tablets",
+      "dosage": "500 mg",
+      "manufacturer": "Johnson & Johnson",
+      "price": 18.25,
+      "availability": true
+    },
+    {
+      "name": "Amoxicillin",
+      "type": "Capsules",
+      "dosage": "250 mg",
+      "manufacturer": "Pfizer",
+      "price": 30.0,
+      "availability": true
+    },
+    {
+      "name": "Loratadine",
+      "type": "Tablets",
+      "dosage": "10 mg",
+      "manufacturer": "Novartis",
+      "price": 15.75,
+      "availability": false
+    },
+    {
+      "name": "Cetirizine",
+      "type": "Tablets",
+      "dosage": "5 mg",
+      "manufacturer": "Mylan",
+      "price": 22.0,
+      "availability": true
+    },
+    {
+      "name": "Ranitidine",
+      "type": "Tablets",
+      "dosage": "150 mg",
+      "manufacturer": "Aurobindo Pharma",
+      "price": 28.5,
+      "availability": true
+    },
+    {
+      "name": "Omeprazole",
+      "type": "Capsules",
+      "dosage": "20 mg",
+      "manufacturer": "Dr. Reddy's Laboratories",
+      "price": 32.75,
+      "availability": true
+    },
+    {
+      "name": "Diphenhydramine",
+      "type": "Tablets",
+      "dosage": "25 mg",
+      "manufacturer": "Perrigo",
+      "price": 19.99,
+      "availability": false
+    },
+    {
+      "name": "Prednisone",
+      "type": "Tablets",
+      "dosage": "10 mg",
+      "manufacturer": "Mylan",
+      "price": 24.0,
+      "availability": true
+    },
+    {
+      "name": "Simvastatin",
+      "type": "Tablets",
+      "dosage": "20 mg",
+      "manufacturer": "Teva Pharmaceutical",
+      "price": 27.5,
+      "availability": true
+    },
+    {
+      "name": "Atorvastatin",
+      "type": "Tablets",
+      "dosage": "40 mg",
+      "manufacturer": "AstraZeneca",
+      "price": 35.25,
+      "availability": true
+    },
+    {
+      "name": "Metformin",
+      "type": "Tablets",
+      "dosage": "500 mg",
+      "manufacturer": "Merck",
+      "price": 21.0,
+      "availability": true
+    },
+    {
+      "name": "Lisinopril",
+      "type": "Tablets",
+      "dosage": "10 mg",
+      "manufacturer": "Boehringer Ingelheim",
+      "price": 29.99,
+      "availability": true
+    },
+    {
+      "name": "Amlodipine",
+      "type": "Tablets",
+      "dosage": "5 mg",
+      "manufacturer": "Takeda Pharmaceuticals",
+      "price": 31.5,
+      "availability": true
+    },
+    {
+      "name": "Losartan",
+      "type": "Tablets",
+      "dosage": "50 mg",
+      "manufacturer": "Novartis",
+      "price": 27.75,
+      "availability": true
+    },
+    {
+      "name": "Hydrochlorothiazide",
+      "type": "Tablets",
+      "dosage": "25 mg",
+      "manufacturer": "Apotex Inc.",
+      "price": 33.0,
+      "availability": true
+    },
+    {
+      "name": "Warfarin",
+      "type": "Tablets",
+      "dosage": "5 mg",
+      "manufacturer": "Bristol Myers Squibb",
+      "price": 23.25,
+      "availability": false
+    },
+    {
+      "name": "Clopidogrel",
+      "type": "Tablets",
+      "dosage": "75 mg",
+      "manufacturer": "Sanofi",
+      "price": 29.5,
+      "availability": true
+    },
+    {
+      "name": "Metoprolol",
+      "type": "Tablets",
+      "dosage": "50 mg",
+      "manufacturer": "AstraZeneca",
+      "price": 26.99,
+      "availability": true
+    },
+    {
+      "name": "Levothyroxine",
+      "type": "Tablets",
+      "dosage": "50 mcg",
+      "manufacturer": "AbbVie",
+      "price": 24.75,
+      "availability": true
+    },
+    {
+      "name": "Fluoxetine",
+      "type": "Capsules",
+      "dosage": "20 mg",
+      "manufacturer": "Eli Lilly and Company",
+      "price": 30.25,
+      "availability": false
+    },
+    {
+      "name": "Citalopram",
+      "type": "Tablets",
+      "dosage": "20 mg",
+      "manufacturer": "Forest Laboratories",
+      "price": 28.0,
+      "availability": true
+    },
+    {
+      "name": "Sertraline",
+      "type": "Tablets",
+      "dosage": "50 mg",
+      "manufacturer": "Pfizer",
+      "price": 29.75,
+      "availability": true
+    },
+    {
+      "name": "Alprazolam",
+      "type": "Tablets",
+      "dosage": "0.5 mg",
+      "manufacturer": "Mylan",
+      "price": 32.0,
+      "availability": true
+    },
+    {
+      "name": "Zolpidem",
+      "type": "Tablets",
+      "dosage": "10 mg",
+      "manufacturer": "Teva Pharmaceutical",
+      "price": 34.5,
+      "availability": true
+    },
+    {
+      "name": "Tramadol",
+      "type": "Capsules",
+      "dosage": "50 mg",
+      "manufacturer": "Janssen Pharmaceuticals",
+      "price": 38.25,
+      "availability": true
+    }
+  ]
+  
