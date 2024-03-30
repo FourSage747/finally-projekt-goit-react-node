@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
 mongoose.set('strictQuery', true)
 mongoose.connect(DB_HOST)
   .then(()=>{
-    app.listen(3000, () => {
+    app.listen(3001, () => {
       console.log("Server is running. Use our API on port: 3000");
     });
   })
