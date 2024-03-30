@@ -1,5 +1,5 @@
 {
-  "name": "goit-node-rest-api",
+  "name": "finally-projekt-goit-react-node",
   "scripts": {
     "start": "node app",
     "dev": "nodemon app"
