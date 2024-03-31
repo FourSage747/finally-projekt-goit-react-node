@@ -19,6 +19,9 @@ const contactSchema = new Schema({
     availability: {
         type: Boolean,
     },
+    imageURL: {
+        type: String,
+    }
 }, { versionKey: false })
 
 contactSchema.post("save", (error, data, next)=>{

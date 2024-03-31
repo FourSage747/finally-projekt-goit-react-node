@@ -10,13 +10,13 @@ const app = express();
 
 
 const contactsRouter = require("./routes/contactsRouter.js")
-// const authRouter = require("./routes/auth.js")
+const authRouter = require("./routes/auth.js")
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"))
 
-// app.use("/users", authRouter)
+app.use("/api/users", authRouter)
 app.use("/api/products", contactsRouter);
 
 app.use((_, res) => {
