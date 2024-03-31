@@ -5,14 +5,15 @@ const User = require("../models/user")
 // const path = require("path")
 // const fs = require("fs/promises")
 // const Jimp = require("jimp")
-const {nanoid} = require("nanoid")
+const dotenv = require("dotenv")
+
+dotenv.config()
 
 
 const {SECRET_KEY} = process.env
 
 
 const HttpError = require("../helpers/HttpError")
-const sendEmail = require("../helpers/sendEmail")
 const {
     registerSchema,
     loginSchema,
