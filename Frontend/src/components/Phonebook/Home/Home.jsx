@@ -1,5 +1,6 @@
 // import css from '../CSS/CSS.module.css'
 import { getProductsThunk } from 'components/redux/task/thunk';
+import { useEffect } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -31,7 +32,7 @@ export const Home = () => {
         <ul>
           {items &&
             items.map(el => (
-              <li id={el._id}>{el.name}</li>
+              <li key={el._id} id={el._id}>{el.name}</li>
             ))}
         </ul>
       )}

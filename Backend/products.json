@@ -5,7 +5,8 @@
       "dosage": "500 mg",
       "manufacturer": "Bayer",
       "price": 25.99,
-      "availability": true
+      "availability": true,
+      "avatarURL": "images/Aspirin.jpg"
     },
     {
       "name": "Ibuprofen",
