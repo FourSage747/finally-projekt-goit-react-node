@@ -37,8 +37,8 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className={css.home}>
-      <form className={css.login} onSubmit={handleSubmit}>
+    <div>
+      <form onSubmit={handleSubmit}>
         <h1>Sign in</h1>
         <label htmlFor="exampleInputEmail1" className="form-label">
           Name
