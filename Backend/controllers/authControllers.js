@@ -1,15 +1,14 @@
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const User = require("../models/user")
-const gravatar = require("gravatar")
-const path = require("path")
-const fs = require("fs/promises")
-const Jimp = require("jimp")
+// const gravatar = require("gravatar")
+// const path = require("path")
+// const fs = require("fs/promises")
+// const Jimp = require("jimp")
 const {nanoid} = require("nanoid")
 
 
-const {SECRET_KEY, BASE_URL} = process.env
-const avatarsDir = path.join(__dirname, "../", "public", "avatars")
+const {SECRET_KEY} = process.env
 
 
 const HttpError = require("../helpers/HttpError")

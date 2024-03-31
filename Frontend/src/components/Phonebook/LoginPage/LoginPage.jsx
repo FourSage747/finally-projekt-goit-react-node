@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 export const LoginPage = () => {
-  const isAuth = useSelector(state => state.auth.token);
+//   const isAuth = useSelector(state => state.auth.token);
   const dispatch = useDispatch();
   // const navigate = useNavigate();
 

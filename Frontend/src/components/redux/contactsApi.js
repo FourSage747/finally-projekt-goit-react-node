@@ -24,9 +24,10 @@ export const singUp = async (body) => {
 
 
 export const login = async (body) => {
-  const {data} = await instance.post('/api/users/login', body)
-  setToken(`Bearer ${data.token}`)
-  return data
+  return await instance.post('/api/users/login', body)
+  // const {data} = await instance.post('/api/users/login', body)
+  // // setToken(`Bearer ${data.token}`)
+  // return data
 }
 
 

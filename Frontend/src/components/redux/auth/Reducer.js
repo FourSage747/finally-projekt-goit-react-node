@@ -1,6 +1,6 @@
 import { loginThunk } from './thunk';
 
-import { createSlice, isAnyOf } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const InitialState = {
   token: '',
@@ -10,15 +10,16 @@ const InitialState = {
 
 const handlePending = (state) => {
     state.isLoading = true
+    state.error = ''
 }
-const handleFulfilled = (state, {payload}) => {
+const handleFulfilled = (state, action) => {
     state.isLoading = false
     state.error = ''
-    state.token = payload.token
+    state.token = action.payload.token
 }
-const handleRejected = (state, {payload}) => {
+const handleRejected = (state, action) => {
     state.isLoading = false
-    state.error = payload
+    state.error = action.payload
 }
 
 const authSlice = createSlice({

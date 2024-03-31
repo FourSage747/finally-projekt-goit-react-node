@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const RegisterPage = () => {
   // const navigate = useNavigate();
-  const isAuth = useSelector(state => state.auth.token);
+//   const isAuth = useSelector(state => state.auth.token);
   const dispatch = useDispatch();
   const handleSubmit = e => {
     e.preventDefault();
