@@ -6,7 +6,7 @@
       "manufacturer": "Bayer",
       "price": 25.99,
       "availability": true,
-      "avatarURL": "images/Aspirin.jpg"
+      "imageURL": "images/Aspirin.jpg"
     },
     {
       "name": "Ibuprofen",
@@ -14,7 +14,8 @@
       "dosage": "200 mg",
       "manufacturer": "GlaxoSmithKline",
       "price": 20.5,
-      "availability": false
+      "availability": false,
+      "imageURL": "images/Ibuprofen.jpg"
     },
     {
       "name": "Acetylcysteine",
@@ -22,7 +23,8 @@
       "dosage": "200 mg/5 ml",
       "manufacturer": "Sanofi",
       "price": 35.75,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Acetylcysteine.jpg"
     },
     {
       "name": "Paracetamol",
@@ -30,7 +32,8 @@
       "dosage": "500 mg",
       "manufacturer": "Johnson & Johnson",
       "price": 18.25,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Paracetamol.jpg"
     },
     {
       "name": "Amoxicillin",
@@ -38,7 +41,8 @@
       "dosage": "250 mg",
       "manufacturer": "Pfizer",
       "price": 30.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Amoxicillin.jpg"
     },
     {
       "name": "Loratadine",
@@ -46,7 +50,8 @@
       "dosage": "10 mg",
       "manufacturer": "Novartis",
       "price": 15.75,
-      "availability": false
+      "availability": false,
+      "imageURL": "images/Loratadine.jpg"
     },
     {
       "name": "Cetirizine",
@@ -54,7 +59,8 @@
       "dosage": "5 mg",
       "manufacturer": "Mylan",
       "price": 22.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Cetirizine.jpg"
     },
     {
       "name": "Ranitidine",
@@ -62,7 +68,8 @@
       "dosage": "150 mg",
       "manufacturer": "Aurobindo Pharma",
       "price": 28.5,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Ranitidine.jpg"
     },
     {
       "name": "Omeprazole",
@@ -70,7 +77,8 @@
       "dosage": "20 mg",
       "manufacturer": "Dr. Reddy's Laboratories",
       "price": 32.75,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Omeprazole.jpg"
     },
     {
       "name": "Diphenhydramine",
@@ -78,7 +86,8 @@
       "dosage": "25 mg",
       "manufacturer": "Perrigo",
       "price": 19.99,
-      "availability": false
+      "availability": false,
+      "imageURL": "images/Diphenhydramine.jpg"
     },
     {
       "name": "Prednisone",
@@ -86,7 +95,8 @@
       "dosage": "10 mg",
       "manufacturer": "Mylan",
       "price": 24.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Prednisone.jpg"
     },
     {
       "name": "Simvastatin",
@@ -94,7 +104,8 @@
       "dosage": "20 mg",
       "manufacturer": "Teva Pharmaceutical",
       "price": 27.5,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Simvastatin.jpg"
     },
     {
       "name": "Atorvastatin",
@@ -102,7 +113,8 @@
       "dosage": "40 mg",
       "manufacturer": "AstraZeneca",
       "price": 35.25,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Atorvastatin.jpg"
     },
     {
       "name": "Metformin",
@@ -110,7 +122,8 @@
       "dosage": "500 mg",
       "manufacturer": "Merck",
       "price": 21.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Metformin.jpg"
     },
     {
       "name": "Lisinopril",
@@ -118,7 +131,8 @@
       "dosage": "10 mg",
       "manufacturer": "Boehringer Ingelheim",
       "price": 29.99,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Lisinopril.jpg"
     },
     {
       "name": "Amlodipine",
@@ -126,7 +140,8 @@
       "dosage": "5 mg",
       "manufacturer": "Takeda Pharmaceuticals",
       "price": 31.5,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Amlodipine.jpg"
     },
     {
       "name": "Losartan",
@@ -134,7 +149,8 @@
       "dosage": "50 mg",
       "manufacturer": "Novartis",
       "price": 27.75,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Losartan.jpg"
     },
     {
       "name": "Hydrochlorothiazide",
@@ -142,7 +158,8 @@
       "dosage": "25 mg",
       "manufacturer": "Apotex Inc.",
       "price": 33.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Hydrochlorothiazide.jpg"
     },
     {
       "name": "Warfarin",
@@ -150,7 +167,8 @@
       "dosage": "5 mg",
       "manufacturer": "Bristol Myers Squibb",
       "price": 23.25,
-      "availability": false
+      "availability": false,
+      "imageURL": "images/Warfarin.jpg"
     },
     {
       "name": "Clopidogrel",
@@ -158,7 +176,8 @@
       "dosage": "75 mg",
       "manufacturer": "Sanofi",
       "price": 29.5,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Clopidogrel.jpg"
     },
     {
       "name": "Metoprolol",
@@ -166,7 +185,8 @@
       "dosage": "50 mg",
       "manufacturer": "AstraZeneca",
       "price": 26.99,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Metoprolol.jpg"
     },
     {
       "name": "Levothyroxine",
@@ -174,7 +194,8 @@
       "dosage": "50 mcg",
       "manufacturer": "AbbVie",
       "price": 24.75,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Levothyroxine.jpg"
     },
     {
       "name": "Fluoxetine",
@@ -182,7 +203,8 @@
       "dosage": "20 mg",
       "manufacturer": "Eli Lilly and Company",
       "price": 30.25,
-      "availability": false
+      "availability": false,
+      "imageURL": "images/Fluoxetine.jpg"
     },
     {
       "name": "Citalopram",
@@ -190,7 +212,8 @@
       "dosage": "20 mg",
       "manufacturer": "Forest Laboratories",
       "price": 28.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Citalopram.jpg"
     },
     {
       "name": "Sertraline",
@@ -198,7 +221,8 @@
       "dosage": "50 mg",
       "manufacturer": "Pfizer",
       "price": 29.75,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Sertraline.jpg"
     },
     {
       "name": "Alprazolam",
@@ -206,7 +230,8 @@
       "dosage": "0.5 mg",
       "manufacturer": "Mylan",
       "price": 32.0,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Alprazolam.jpg"
     },
     {
       "name": "Zolpidem",
@@ -214,7 +239,8 @@
       "dosage": "10 mg",
       "manufacturer": "Teva Pharmaceutical",
       "price": 34.5,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Zolpidem.jpg"
     },
     {
       "name": "Tramadol",
@@ -222,7 +248,8 @@
       "dosage": "50 mg",
       "manufacturer": "Janssen Pharmaceuticals",
       "price": 38.25,
-      "availability": true
+      "availability": true,
+      "imageURL": "images/Tramadol.jpg"
     }
   ]
   

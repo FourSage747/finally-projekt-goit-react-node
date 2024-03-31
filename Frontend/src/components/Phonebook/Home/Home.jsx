@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export const Home = () => {
   const dispatch = useDispatch();
   const { isLoading, items } = useSelector(state => state.products.products);
+  const BASE_URL = "https://finally-projekt-goit-react-node.onrender.com"
 
   useEffect(() => {
     dispatch(getProductsThunk())
@@ -32,7 +33,10 @@ export const Home = () => {
         <ul>
           {items &&
             items.map(el => (
-              <li key={el._id} id={el._id}>{el.name}</li>
+              <li key={el._id} id={el._id}>
+                <img src={`${BASE_URL}/${el.imageURL}`} width="100" alt="" />
+                {el.name}
+              </li>
             ))}
         </ul>
       )}
