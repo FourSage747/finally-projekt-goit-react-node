@@ -30,12 +30,11 @@ const handleRejected = (state, action) => {
 const authSlice = createSlice({
   name: 'auth',
   initialState: InitialState,
-//   reducers: {
-//     logOut: (state)=>{
-//       state.token = ''
-//       state.profile = null
-//     }
-//   },
+  reducers: {
+    logOut: (state)=>{
+      state.token = ''
+    }
+  },
   extraReducers: builder => {
     builder
       .addCase(loginThunk.pending, handlePending)
@@ -48,4 +47,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-// export const {logOut} = authSlice.actions;
+export const {logOut} = authSlice.actions;

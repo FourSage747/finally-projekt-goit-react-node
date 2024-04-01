@@ -4,13 +4,17 @@ import { getProductsThunk } from 'components/redux/task/thunk';
 import { useEffect, useState } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 // import { deleteProducts, shoppingCart } from "./redux/Reducer";
 
 export const Home = () => {
   const [checkedToken, setCheckedToken] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { isLoading, items } = useSelector(state => state.products.products);
   const {shopping} = useSelector(state => state.products)
+  const {token, user: {name, email}} = useSelector(state => state.auth)
   const BASE_URL = "https://finally-projekt-goit-react-node.onrender.com"
 
   useEffect(() => {
@@ -86,9 +90,61 @@ export const Home = () => {
         <span>{totalAmount}$</span>
         <button type="button" onClick={handleCheckToken}>buy</button>
       </div>
-      {/* <div>
-
-      </div> */}
+      {token && checkedToken && <div>
+        <form>
+          <h1>Order</h1>
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Name
+          </label>
+          <input
+            name="name"
+            type="text"
+            aria-describedby="emailHelp"
+            required
+            value={name}
+          />
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Email
+          </label>
+          <input
+            name="email"
+            type="text"
+            aria-describedby="emailHelp"
+            required
+            value={email}
+          />
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Number
+          </label>
+          <input
+            name="number"
+            type="text"
+            aria-describedby="emailHelp"
+            required
+          />
+        </form>
+        <ul>
+          {shopping.map(el => {
+              // const isInCart = shopping.some(item => item._id === el._id);
+              return (
+                <li key={el._id} id={el._id}>
+                    <img src={`${BASE_URL}/${el.imageURL}`} width="100" alt="" />
+                    <span>{el.name}</span><br />
+                    <p>price: ${el.price * el.quantity}</p><br />
+                    {/* <button type="button" onClick={() => handleAdd(el._id)}>Add</button> */}
+                    <span>{el.quantity}</span>
+                    <button type="button" onClick={() => handleRemove(el._id)}>Remove</button>
+                </li>
+              );
+            })}
+        </ul>
+      </div>}
+      {!token && checkedToken && <div>
+        <h2>You are not logged in</h2>
+        <p>please login</p>
+        <Link to="/login">Login in</Link>
+        <Link to="/register">Sign in</Link>
+      </div>}
     </>
   );
 };
