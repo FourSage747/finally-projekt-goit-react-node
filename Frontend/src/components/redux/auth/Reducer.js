@@ -37,7 +37,7 @@ const authSlice = createSlice({
       .addCase(loginThunk.fulfilled, handleFulfilled)
       .addCase(loginThunk.rejected, (state, action) => {
         state.isLoading = false
-        state.error = action.payload;;
+        state.error = action.error.message;
       })
   },
 });

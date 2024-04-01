@@ -27,12 +27,15 @@ export const LoginPage = () => {
       })
     )
       .unwrap()
-      .then(() => {
+      .then((data) => {
         // navigate('/contacts')
         // dispatch(getProfileThunk(isAuth))
-        console.log("Succes")
+        console.log(data)
       })
-      .catch(() => Notiflix.Notify.failure('Some error'));
+      .catch((Payload) =>{
+        Notiflix.Notify.failure('Some error')
+        console.log(Payload)
+      });
   };
   return (
     <div>
