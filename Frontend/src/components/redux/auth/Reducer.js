@@ -4,18 +4,23 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const InitialState = {
   token: '',
+  user: {
+    name: '',
+    email: ''
+  },
   isLoading: false,
   error: null,
 };
 
 const handlePending = (state) => {
     state.isLoading = true
-    state.error = ''
 }
 const handleFulfilled = (state, action) => {
     state.isLoading = false
     state.error = ''
     state.token = action.payload.token
+    state.user.name = action.payload.user.name
+    state.user.email = action.payload.user.email
 }
 const handleRejected = (state, action) => {
     state.isLoading = false

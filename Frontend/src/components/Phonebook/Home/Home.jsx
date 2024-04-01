@@ -1,12 +1,13 @@
 // import css from '../CSS/CSS.module.css'
 import { deleteProducts, shoppingCart, plus, minus } from 'components/redux/task/Reducer';
 import { getProductsThunk } from 'components/redux/task/thunk';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 // import { deleteProducts, shoppingCart } from "./redux/Reducer";
 
 export const Home = () => {
+  const [checkedToken, setCheckedToken] = useState(false);
   const dispatch = useDispatch();
   const { isLoading, items } = useSelector(state => state.products.products);
   const {shopping} = useSelector(state => state.products)
@@ -47,6 +48,10 @@ export const Home = () => {
     return total + (item.price * item.quantity);
   }, 0);
 
+  const handleCheckToken = () => {
+    setCheckedToken(true);
+  };
+
   return (
     <>
       {isLoading && (
@@ -79,8 +84,11 @@ export const Home = () => {
       )}
       <div>
         <span>{totalAmount}$</span>
-        <button type="button">buy</button>
+        <button type="button" onClick={handleCheckToken}>buy</button>
       </div>
+      {/* <div>
+
+      </div> */}
     </>
   );
 };
