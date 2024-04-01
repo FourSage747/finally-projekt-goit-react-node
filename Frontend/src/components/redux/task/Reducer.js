@@ -7,7 +7,7 @@ export const InitialState = {
     isLoading: false,
     error: null,
   },
-  // filter: '',
+  shopping: []
 };
 
 
@@ -15,11 +15,38 @@ export const InitialState = {
 export const contactsSlice = createSlice({
   name: 'contacts',
   initialState: InitialState,
-  // reducers: {
-  //   setFilter: (state, action) => {
-  //       state.filter = action.payload;
-  //   },
-  // },
+  reducers: {
+    shoppingCart: (state, action) => {
+      state.shopping = [action.payload, ...state.shopping]
+    },
+    deleteProducts: (state, action) => {
+      state.shopping = state.shopping.filter((el) => el._id !== action.payload);
+    },
+    plus: (state, action) => {
+      const updatedShopping = state.shopping.map((el) => {
+          if (el._id === action.payload) {
+              return {
+                  ...el,
+                  quantity: el.quantity + 1
+              };
+          }
+          return el;
+      });
+      state.shopping = updatedShopping;
+    },  
+    minus: (state, action) => {
+      const updatedShopping = state.shopping.map((el) => {
+          if (el._id === action.payload) {
+              return {
+                  ...el,
+                  quantity: el.quantity - 1
+              };
+          }
+          return el;
+      });
+      state.shopping = updatedShopping;
+    }  
+  },
   extraReducers: builder => {
     builder
       .addCase(getProductsThunk.pending, state => {
@@ -37,20 +64,5 @@ export const contactsSlice = createSlice({
   },
 });
 
-// const filtersSlice = createSlice({
-//     name: "filters",
-//     initialState: InitialState,
-//     reducers: {
-//         setFilter: (state, action) => {
-//             state.filter = action.payload;
-//       },
-//     },
-//   });
-
 export const contactsReducer = contactsSlice.reducer;
-// export const filtersReducer = filtersSlice.reducer;
-
-// export const {setFilter } = contactsSlice.actions;
-
-// export const { creatContacts, deleteContacts, setFilter } =
-//   contactsSlice.actions;
+export const { shoppingCart, deleteProducts, plus, minus } = contactsSlice.actions;

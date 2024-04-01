@@ -56,7 +56,10 @@ const login = async(req, res, next) => {
         }
         const comparePassword = await bcrypt.compare(password, user.password)
         if(!comparePassword){
-            throw HttpError(401, "Password is wrong")
+            // throw HttpError(401, "Password is wrong")
+            res.json({
+                message: "Password is wrong"
+            })
         }
         
         const payload = {

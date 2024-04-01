@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const InitialState = {
   token: '',
   isLoading: false,
-  error: '',
+  error: null,
 };
 
 const handlePending = (state) => {
@@ -19,7 +19,7 @@ const handleFulfilled = (state, action) => {
 }
 const handleRejected = (state, action) => {
     state.isLoading = false
-    state.error = action.payload
+    state.error = action.payload.message;;
 }
 
 const authSlice = createSlice({
@@ -35,7 +35,10 @@ const authSlice = createSlice({
     builder
       .addCase(loginThunk.pending, handlePending)
       .addCase(loginThunk.fulfilled, handleFulfilled)
-      .addCase(loginThunk.rejected, handleRejected)
+      .addCase(loginThunk.rejected, (state, action) => {
+        state.isLoading = false
+        state.error = action.payload;;
+      })
   },
 });
 
