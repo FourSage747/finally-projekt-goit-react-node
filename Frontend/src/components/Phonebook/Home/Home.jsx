@@ -1,6 +1,6 @@
 // import css from '../CSS/CSS.module.css'
 import { deleteProducts, shoppingCart, plus, minus } from 'components/redux/task/Reducer';
-import { getProductsThunk } from 'components/redux/task/thunk';
+import { getProductsThunk, postOrderThunk } from 'components/redux/task/thunk';
 import Notiflix from 'notiflix';
 import { useEffect, useState } from 'react';
 import { ColorRing } from 'react-loader-spinner';
@@ -18,8 +18,8 @@ export const Home = () => {
   const {token, user: {name, email}} = useSelector(state => state.auth)
   const BASE_URL = "https://finally-projekt-goit-react-node.onrender.com"
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    name: name ? name : '',
+    email: email ? email : '',
     number: '',
   });
 
@@ -78,24 +78,28 @@ export const Home = () => {
     }
     else {
       const newOrder = {
+        // shopping.map(item => ({
+        //   name: name,
+        //   email: email,
+        //   phone: phone,
+        // }))
         name: name,
         email: email,
-        phone: phone,
-        address: address,
-        shopping: shopping.map(item => ({
+        number: number,
+        order: shopping.map(item => ({
           name: item.name,
-          price: item.price
+          price: item.price,
+          quantity: item.quantity
         }))
       }
-      dispatch(postShoppingThunk(newShopping))
+      dispatch(postOrderThunk(newOrder))
       .unwrap()
       .then(()=>Notiflix.Notify.success('Your order has been accepted'))
       .catch(()=>Notiflix.Notify.failure('Some error'))
       setFormData({
         name: '',
         email: '',
-        phone: '',
-        address: ''
+        number: '',
       })
     }
   };

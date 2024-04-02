@@ -37,11 +37,18 @@ export const logout = async (token) => {
   return data
 }
 
-export const postOrder = async (body, token) => {
-  setToken(`Bearer ${token}`)
-  const {data} = await instance.post('/api/products', body, token)
-  return data
-}
+// export const postOrder = async (body, token) => {
+//   setToken(`Bearer ${token}`)
+//   const {data} = await instance.post('/api/products', body)
+//   return data
+// }
+
+export const postOrder = async (newOrder) => {
+  const { name, email, number, order, token } = newOrder;
+  setToken(`Bearer ${token}`);
+  const { data } = await instance.post('/api/products', { name, email, number, order });
+  return data;
+};
 
 
 // export const getProfile = async (token) => {

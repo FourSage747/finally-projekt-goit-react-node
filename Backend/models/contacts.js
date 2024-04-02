@@ -42,20 +42,22 @@ const shoppingSchema = new Schema({
         type: String,
         required: true,
     },
-    order: {
-        name: {
-            type: String,
-            required: true,
-        },
-        price: {
-            type: Number,
-            required: true,
-        },
-        quantity: {
-            type: Number,
-            required: true,
-        },
-    },
+    order: [
+        {
+            name: {
+                type: String,
+                required: true,
+            },
+            price: {
+                type: Number,
+                required: true,
+            },
+            quantity: {
+                type: Number,
+                required: true,
+            },
+        }
+    ]
 }, { versionKey: false });
 
 shoppingSchema.post("save", (error, data, next)=>{
