@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getProductsThunk } from './thunk';
+import { getProductsThunk, postOrderThunk } from './thunk';
 
 export const InitialState = {
   products: {
@@ -58,6 +58,18 @@ export const contactsSlice = createSlice({
         state.products.error = '';
       })
       .addCase(getProductsThunk.rejected, (state, action) => {
+        state.products.isLoading = false;
+        state.products.error = action.payload;
+      })
+      .addCase(postOrderThunk.pending, state => {
+        state.products.isLoading = true;
+      })
+      .addCase(postOrderThunk.fulfilled, (state, action) => {
+        state.products.isLoading = false;
+        state.shopping = [];
+        state.products.error = '';
+      })
+      .addCase(postOrderThunk.rejected, (state, action) => {
         state.products.isLoading = false;
         state.products.error = action.payload;
       })

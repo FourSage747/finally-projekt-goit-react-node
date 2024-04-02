@@ -34,25 +34,25 @@ const shoppingSchema = new Schema({
         type: String,
         required: true,
     },
-    price: {
-        type: Number,
+    email: {
+        type: String,
         required: true,
     },
-    quantity: {
-        type: Number,
+    number: {
+        type: String,
         required: true,
     },
-    owner: {
+    order: {
         name: {
             type: String,
             required: true,
         },
-        email: {
-            type: String,
+        price: {
+            type: Number,
             required: true,
         },
-        number: {
-            type: String,
+        quantity: {
+            type: Number,
             required: true,
         },
     },
