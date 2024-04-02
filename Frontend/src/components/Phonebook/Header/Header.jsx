@@ -1,4 +1,4 @@
-// import css from '../CSS/CSS.module.css';
+import css from '../CSS/CSS.module.css';
 import { logOut } from 'components/redux/auth/Reducer';
 // import { getProfileThunk } from 'components/redux/auth/thunk';
 import { logout } from 'components/redux/contactsApi';
@@ -21,15 +21,16 @@ export const Header = () => {
     dispatch(logOut());
   };
 
-  // useEffect(()=>{token && dispatch(getProfileThunk(token))},[token])
 
   return (
-    <div>
-      <NavLink to="/"> Home </NavLink>
-      <ul>
-        {name && <p>{name}</p>}
-        <button onClick={token ? handleLogout : handleLogin}>{token ? 'Logout' : 'Login' }</button>
-        <NavLink to="/register"> Sign in </NavLink>
+    <div className={css.navigate}>
+      {/* <img src="https://finally-projekt-goit-react-node.onrender.com/medical-logo.jpg" alt="" /> */}
+      <a href="#">home</a>
+      {/* <NavLink to="/"> <img src="../img/pngtree-medical-logo-vector-png-image_6713322.png" alt="" /> </NavLink> */}
+      <ul className={css.navigateLink}>
+        {name && <p className={css.navigateLinkPar}>{name}</p>}
+        <button className={css.navigateLinkButton} onClick={token ? handleLogout : handleLogin}>{token ? 'Logout' : 'Login' }</button>
+        <NavLink className={css.navigateLinkButton} to="/register"> Sign in </NavLink>
       </ul>
     </div>
   );

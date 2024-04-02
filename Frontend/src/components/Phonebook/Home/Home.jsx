@@ -1,4 +1,4 @@
-// import css from '../CSS/CSS.module.css'
+import css from '../CSS/CSS.module.css'
 import { deleteProducts, shoppingCart, plus, minus } from 'components/redux/task/Reducer';
 import { getProductsThunk, postOrderThunk } from 'components/redux/task/thunk';
 import Notiflix from 'notiflix';
@@ -78,11 +78,6 @@ export const Home = () => {
     }
     else {
       const newOrder = {
-        // shopping.map(item => ({
-        //   name: name,
-        //   email: email,
-        //   phone: phone,
-        // }))
         name: name,
         email: email,
         number: number,
@@ -118,17 +113,19 @@ export const Home = () => {
         />
       )}
       {!isLoading && items && items.length > 0 && (
-        <ul>
+        <ul className={css.listItem}>
           {items.map(el => {
               const isInCart = shopping.some(item => item._id === el._id);
               return (
-                <li key={el._id} id={el._id}>
+                <li className={css.item} key={el._id} id={el._id}>
                     <img src={`${BASE_URL}/${el.imageURL}`} width="100" alt="" />
-                    <span>{el.name}</span><br />
-                    <p>price: ${el.price}</p><br />
-                    <button type="button" onClick={() => handleAdd(el._id)}>Add</button>
-                    <span>{isInCart && shopping.find(sh => sh._id === el._id).quantity}</span>
-                    {isInCart && <button type="button" onClick={() => handleRemove(el._id)}>Remove</button>}
+                    <span className={css.itemSpan}>{el.name}</span>
+                    <p className={css.itemPar}>price: ${el.price}</p>
+                    <div className={css.itemDiv}>
+                      <button className={`${css.itemButton} ${css.add}`} type="button" onClick={() => handleAdd(el._id)}>Add</button>
+                      <span className={css.itemSpan}>{isInCart && shopping.find(sh => sh._id === el._id).quantity}</span>
+                      {isInCart && <button className={`${css.itemButton} ${css.remove}`} type="button" onClick={() => handleRemove(el._id)}>Remove</button>}
+                    </div>
                 </li>
               );
             })}

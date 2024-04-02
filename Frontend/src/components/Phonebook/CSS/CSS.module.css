@@ -1,107 +1,80 @@
-.home {
-    width: 100%;
-    height: 92vh;
-    background-image: url(../img/Page\ -\ Home_7.webp);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.title {
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    background-color: black;
-    padding: 10px;
-    border-radius: 10px;
-}
 .navigate {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
-    background-color: black;
+    padding: 20px 50px;
+    background-color: mediumspringgreen;
 }
-.navigateButton {
-    padding: 0;
-    margin: 0;
+.navigateLink {
     display: flex;
-    align-items: center;
+    margin: 0;
+    padding: 0;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
-.link {
+.navigateLinkPar {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+.navigateLinkButton {
+    border: 2px solid mediumseagreen;
+    border-radius: 10px;
+    margin: 0;
+    padding: 10px;
+    background: transparent;
     text-decoration: none;
+    color: mediumseagreen;
+    transition: all 0.5s ease;
+}
+.navigateLinkButton:hover {
+    background-color: mediumseagreen;
     color: white;
-    border: 0;
-    background: transparent;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 3px;
 }
-.linkActive {
-    background-color: darkorange;
-    border-radius: 10px;
-}
-.login {
-    width: 30%;
-    height: 70%;
-    background-color: white;
-    border-radius: 20px;
-    padding: 30px;
-    color: black;
-}
-.button {
-    background-color: darkorange;
-    border-radius: 10px;
-    border: 0;
-    color: white;
-    padding: 5px 15px;
-    font-size: 15px;
-    font-weight: bold;
-}
-.ulButton {
-    margin: 0;
-    margin-top: 40px;
-    padding: 0;
+.listItem {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.input {
-    width: 100%;
-    padding: 3px 10px;
-    border-radius: 10px;
-    color: black;
-    background: transparent;
-    border: 1px solid black;
-}
-.name {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
     margin: 0;
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-    background-color: lawngreen;
-    border-radius: 30px;
-}
-.contactBook {
-    width: 80%;
-    height: 90%;
-    background-color: white;
-    border-radius: 20px;
     padding: 30px;
-    overflow: auto;
 }
-.filter {
-    margin-top: 30px;
+.item {
+    width: 300px;
+    height: 250px;
+    border: 2px solid mediumseagreen;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
-.contacts {
-    margin: 0;
-    margin-top: 20px;
-    /* padding: 0; */
-}
-.contactsLi {
+.itemSpan {
     font-weight: bold;
-    font-size: 20px;
+}
+.itemPar {
+    margin: 0;
+}
+.itemDiv {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.itemButton {
+    margin: 0;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+}
+.add {
+    background-color: mediumseagreen;
+}
+.remove {
+    background-color: red;
 }
