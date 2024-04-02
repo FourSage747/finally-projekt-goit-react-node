@@ -1,6 +1,7 @@
 // import css from '../CSS/CSS.module.css'
 import { deleteProducts, shoppingCart, plus, minus } from 'components/redux/task/Reducer';
 import { getProductsThunk } from 'components/redux/task/thunk';
+import Notiflix from 'notiflix';
 import { useEffect, useState } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,6 +17,11 @@ export const Home = () => {
   const {shopping} = useSelector(state => state.products)
   const {token, user: {name, email}} = useSelector(state => state.auth)
   const BASE_URL = "https://finally-projekt-goit-react-node.onrender.com"
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    number: '',
+  });
 
   useEffect(() => {
     dispatch(getProductsThunk())
@@ -54,6 +60,44 @@ export const Home = () => {
 
   const handleCheckToken = () => {
     setCheckedToken(true);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, number } = formData;
+    if (!name||!email||!number) {
+      Notiflix.Notify.failure('Each field must be filled')
+    }
+    else {
+      const newOrder = {
+        name: name,
+        email: email,
+        phone: phone,
+        address: address,
+        shopping: shopping.map(item => ({
+          name: item.name,
+          price: item.price
+        }))
+      }
+      dispatch(postShoppingThunk(newShopping))
+      .unwrap()
+      .then(()=>Notiflix.Notify.success('Your order has been accepted'))
+      .catch(()=>Notiflix.Notify.failure('Some error'))
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: ''
+      })
+    }
   };
 
   return (
@@ -102,6 +146,7 @@ export const Home = () => {
             aria-describedby="emailHelp"
             required
             value={name}
+            onChange={handleChange} 
           />
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email
@@ -112,6 +157,7 @@ export const Home = () => {
             aria-describedby="emailHelp"
             required
             value={email}
+            onChange={handleChange} 
           />
           <label htmlFor="exampleInputEmail1" className="form-label">
             Number
@@ -121,6 +167,7 @@ export const Home = () => {
             type="text"
             aria-describedby="emailHelp"
             required
+            onChange={handleChange} 
           />
         </form>
         <ul>
@@ -138,6 +185,7 @@ export const Home = () => {
               );
             })}
         </ul>
+        <button type="submit" onClick={handleSubmit}>Submit</button>
       </div>}
       {!token && checkedToken && <div>
         <h2>You are not logged in</h2>

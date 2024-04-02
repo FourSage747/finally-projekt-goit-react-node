@@ -1,12 +1,8 @@
 const express = require("express")
-// const authenticate = require("../helpers/authenticate.js")
+const authenticate = require("../helpers/authenticate.js")
 const {
   getAllContacts,
-  getOneContact,
-  deleteContact,
   createContact,
-  updateContact,
-  updateFavorite
 } = require("../controllers/contactsControllers.js")
 
 // const isValidId = require("../helpers/validateBody.js")
@@ -19,7 +15,7 @@ contactsRouter.get("/", getAllContacts);
 
 // contactsRouter.delete("/:id", authenticate, isValidId, deleteContact);
 
-// contactsRouter.post("/", authenticate, createContact);
+contactsRouter.post("/", authenticate, createContact);
 
 // contactsRouter.put("/:id", authenticate, isValidId, updateContact);
 

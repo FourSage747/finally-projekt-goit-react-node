@@ -29,6 +29,44 @@ contactSchema.post("save", (error, data, next)=>{
     next()
 })
 
-const Contact = model("ptoducts", contactSchema)
+const shoppingSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    price: {
+        type: Number,
+        required: true,
+    },
+    quantity: {
+        type: Number,
+        required: true,
+    },
+    owner: {
+        name: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+        },
+        number: {
+            type: String,
+            required: true,
+        },
+    },
+}, { versionKey: false });
 
-module.exports = Contact;
+shoppingSchema.post("save", (error, data, next)=>{
+    error.status = 400
+    next()
+})
+
+const Contact = model("ptoducts", contactSchema)
+const Shopping = model("shopping", shoppingSchema)
+
+module.exports = {
+    Contact,
+    Shopping
+};

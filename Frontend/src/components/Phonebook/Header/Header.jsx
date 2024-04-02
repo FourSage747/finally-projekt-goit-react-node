@@ -10,15 +10,15 @@ export const Header = () => {
   const {token, user: {name, email}} = useSelector(state => state.auth)
   // const { profile, token } = useSelector(state => state.auth);
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const location = useLocation();
 
   const handleLogin = () => {
     navigate('/login');
   };
   const handleLogout = () => {
+    logout(token)
     dispatch(logOut());
-    logout()
   };
 
   // useEffect(()=>{token && dispatch(getProfileThunk(token))},[token])
@@ -27,7 +27,8 @@ export const Header = () => {
     <div>
       <NavLink to="/"> Home </NavLink>
       <ul>
-        <NavLink onClick={token ? handleLogout : handleLogin}>{token ? 'Logout' : 'Login' }</NavLink>
+        {name && <p>{name}</p>}
+        <button onClick={token ? handleLogout : handleLogin}>{token ? 'Logout' : 'Login' }</button>
         <NavLink to="/register"> Sign in </NavLink>
       </ul>
     </div>

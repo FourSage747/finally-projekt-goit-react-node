@@ -33,6 +33,8 @@ const authSlice = createSlice({
   reducers: {
     logOut: (state)=>{
       state.token = ''
+      state.user.name = ''
+      state.user.email = ''
     }
   },
   extraReducers: builder => {

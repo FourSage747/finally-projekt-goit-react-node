@@ -26,13 +26,20 @@ export const singUp = async (body) => {
 export const login = async (body) => {
   // return await instance.post('/api/users/login', body)
   const {data} = await instance.post('/api/users/login', body)
+  setToken(`Bearer ${data.token}`)
+  return data
+}
+export const logout = async (token) => {
+  // return await instance.post('/api/users/login', body)
+  setToken(`Bearer ${token}`)
+  const {data} = await instance.post('/api/users/logout', token)
   // setToken(`Bearer ${data.token}`)
   return data
 }
-export const logout = async () => {
-  // return await instance.post('/api/users/login', body)
-  const {data} = await instance.post('/api/users/logout')
-  setToken(`Bearer ${data.token}`)
+
+export const postOrder = async (body, token) => {
+  setToken(`Bearer ${token}`)
+  const {data} = await instance.post('/api/products', body, token)
   return data
 }
 
