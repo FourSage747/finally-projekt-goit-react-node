@@ -1,4 +1,4 @@
-// import css from '../CSS/CSS.module.css';
+import css from '../CSS/CSS.module.css';
 import { loginThunk } from 'components/redux/auth/thunk';
 import Notiflix from 'notiflix';
 // import { useEffect } from 'react';
@@ -38,30 +38,32 @@ export const LoginPage = () => {
       });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={css.registerLogin}>
+      <form onSubmit={handleSubmit} className={css.registerLoginForm}>
         <h1>Log in</h1>
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="exampleInputEmail1" className={css.succesOrderLabel}>
           Email
         </label>
         <input
           name="email"
           type="email"
           aria-describedby="emailHelp"
+          className={css.succesOrderInput}
           required
         />
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="exampleInputEmail1" className={css.succesOrderLabel}>
           Password
         </label>
         <input
           name="password"
           type="password"
           aria-describedby="emailHelp"
+          className={css.succesOrderInput}
           required
         />
-        <ul>
-          <Link to="/register">Sign in</Link>
-          <button type="submit">Log in</button>
+        <ul className={css.registerLoginUL}>
+          <Link className={`${css.navigateLinkButton} ${css.logoutLinkButton}`} to="/register">Sign in</Link>
+          <button className={`${css.navigateLinkButton} ${css.logoutLinkButton}`} type="submit">Log in</button>
         </ul>
       </form>
     </div>

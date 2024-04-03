@@ -1,9 +1,17 @@
+.layout {
+    position: relative;
+}
 .navigate {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 0 50px;
     background-color: mediumspringgreen;
+}
+.navigateSpan {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
 }
 .navigateLink {
     display: flex;
@@ -78,3 +86,123 @@
 .remove {
     background-color: red;
 }
+.totalAmount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    width: 700px;
+    height: 100px;
+    border-radius: 20px;
+    opacity: 0.9;
+    background-color: mediumseagreen;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+.render {
+    bottom: 10px;
+}
+.dont {
+    bottom: -100%;
+}
+.totalAmountSpan {
+    font-size: 25px;
+    font-weight: bold;
+}
+.totalAmountButton {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid seagreen;
+    background-color: lightseagreen;
+    color: white;
+}
+.succesOrder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.succesOrderWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+    width: 700px;
+    height: 500px;
+    padding: 30px;
+}
+.succesOrderDiv {
+    display: flex;
+    justify-content: space-between;
+}
+.succesOrderForm {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 5px;
+}
+.succesOrderLabel {
+    margin: 0;
+    font-weight: bold;
+}
+.succesOrderInput {
+    border: 0;
+    border-bottom: 1px solid seagreen;
+}
+.succesOrderUl {
+    height: 400px;
+    flex-wrap: nowrap;
+    justify-content: start;
+    flex-direction: column;
+    overflow: auto;
+}
+.logoutOrderWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.logoutLinkButton {
+    width: 200px;
+    text-align: center
+}
+.registerLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.registerLoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid mediumseagreen;
+}
+.registerLoginUL {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.colorringwrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

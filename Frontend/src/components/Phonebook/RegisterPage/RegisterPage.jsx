@@ -1,4 +1,4 @@
-// import css from '../CSS/CSS.module.css';
+import css from '../CSS/CSS.module.css';
 import { loginThunk } from 'components/redux/auth/thunk';
 import { singUp } from 'components/redux/contactsApi';
 import Notiflix from 'notiflix';
@@ -37,39 +37,42 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={css.registerLogin}>
+      <form onSubmit={handleSubmit} className={css.registerLoginForm}>
         <h1>Sign in</h1>
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="exampleInputEmail1" className={css.succesOrderLabel}>
           Name
         </label>
         <input
           name="name"
           type="text"
           aria-describedby="emailHelp"
+          className={css.succesOrderInput}
           required
         />
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="exampleInputEmail1" className={css.succesOrderLabel}>
           Email
         </label>
         <input
           name="email"
           type="email"
           aria-describedby="emailHelp"
+          className={css.succesOrderInput}
           required
         />
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="exampleInputEmail1" className={css.succesOrderLabel}>
           Password
         </label>
         <input
           name="password"
           type="password"
           aria-describedby="emailHelp"
+          className={css.succesOrderInput}
           required
         />
-        <ul>
-          <Link to="/login">Login</Link>
-          <button type="submit">Sign in</button>
+        <ul className={css.registerLoginUL}>
+          <Link className={`${css.navigateLinkButton} ${css.logoutLinkButton}`} to="/login">Login</Link>
+          <button className={`${css.navigateLinkButton} ${css.logoutLinkButton}`} type="submit">Sign in</button>
         </ul>
       </form>
     </div>

@@ -5,6 +5,7 @@ import { logout } from 'components/redux/contactsApi';
 // import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import img from '../img/pngtree-medical-logo-vector-png-image_6713322.png'
 
 export const Header = () => {
   const {token, user: {name, email}} = useSelector(state => state.auth)
@@ -24,13 +25,16 @@ export const Header = () => {
 
   return (
     <div className={css.navigate}>
-      {/* <img src="https://finally-projekt-goit-react-node.onrender.com/medical-logo.jpg" alt="" /> */}
-      <a href="#">home</a>
-      {/* <NavLink to="/"> <img src="../img/pngtree-medical-logo-vector-png-image_6713322.png" alt="" /> </NavLink> */}
+      {/* <img src={img} alt="" width="100"/> */}
+      {/* <a href="#">home</a> */}
+      <div>
+        <NavLink to="/"> <img src={img} alt="" width="100"/></NavLink>
+        <span className={css.navigateSpan}>Medicine Shop</span>
+      </div>
       <ul className={css.navigateLink}>
         {name && <p className={css.navigateLinkPar}>{name}</p>}
         <button className={css.navigateLinkButton} onClick={token ? handleLogout : handleLogin}>{token ? 'Logout' : 'Login' }</button>
-        <NavLink className={css.navigateLinkButton} to="/register"> Sign in </NavLink>
+        {!token && <NavLink className={css.navigateLinkButton} to="/register"> Sign in </NavLink>}
       </ul>
     </div>
   );
