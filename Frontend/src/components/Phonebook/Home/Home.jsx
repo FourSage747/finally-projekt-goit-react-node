@@ -5,14 +5,14 @@ import Notiflix from 'notiflix';
 import { useEffect, useState } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const [checkedToken, setCheckedToken] = useState(false);
   const [buttonBuy, setbuttonBuy] = useState(true);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { isLoading, items } = useSelector(state => state.products.products);
   const {shopping} = useSelector(state => state.products)
   const {token, user: {name, email}} = useSelector(state => state.auth)

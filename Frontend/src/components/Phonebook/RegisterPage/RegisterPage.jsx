@@ -2,7 +2,7 @@ import css from '../CSS/CSS.module.css';
 import { loginThunk } from 'components/redux/auth/thunk';
 import { singUp } from 'components/redux/contactsApi';
 import Notiflix from 'notiflix';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 // import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 

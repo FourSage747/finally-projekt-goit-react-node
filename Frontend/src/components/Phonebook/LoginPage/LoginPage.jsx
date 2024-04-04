@@ -3,7 +3,7 @@ import { loginThunk } from 'components/redux/auth/thunk';
 import Notiflix from 'notiflix';
 // import { useEffect } from 'react';
 // import { login } from "components/redux/contactsApi";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 // import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 

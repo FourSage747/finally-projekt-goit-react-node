@@ -22,10 +22,10 @@ const handleFulfilled = (state, action) => {
     state.user.name = action.payload.user.name
     state.user.email = action.payload.user.email
 }
-const handleRejected = (state, action) => {
-    state.isLoading = false
-    state.error = action.payload.message;;
-}
+// const handleRejected = (state, action) => {
+//     state.isLoading = false
+//     state.error = action.payload.message;;
+// }
 
 const authSlice = createSlice({
   name: 'auth',

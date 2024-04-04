@@ -4,11 +4,11 @@ import { logOut } from 'components/redux/auth/Reducer';
 import { logout } from 'components/redux/contactsApi';
 // import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import img from '../img/pngtree-medical-logo-vector-png-image_6713322.png'
 
 export const Header = () => {
-  const {token, user: {name, email}} = useSelector(state => state.auth)
+  const {token, user: {name}} = useSelector(state => state.auth)
   // const { profile, token } = useSelector(state => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
